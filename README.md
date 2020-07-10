@@ -11,7 +11,7 @@ If their kind are exclusive with different strength, subscriber will only receiv
 * subscriber side
 
 ```bash
-ros2 run ownership ownership_sub -k shared
+ros2 run nsdk_ownership ownership_sub -k shared
 ```
 
 * publisher side
@@ -19,13 +19,13 @@ ros2 run ownership ownership_sub -k shared
   - One publisher is shared ownership and it's ID is 100
 
 ```bash
-ros2 run ownership ownership_pub -k shared -i 100
+ros2 run nsdk_ownership ownership_pub -k shared -i 100
 ```
 
   - One publisher is shared ownership and it's ID is 200
 
 ```bash
-ros2 run ownership ownership_pub -k shared -i 200
+ros2 run nsdk_ownership ownership_pub -k shared -i 200
 ```
 
 ## Exclusive ownership example
@@ -33,7 +33,7 @@ ros2 run ownership ownership_pub -k shared -i 200
 * subscriber side
 
 ```bash
-ros2 run ownership ownership_sub -k exclusive
+ros2 run nsdk_ownership ownership_sub -k exclusive
 ```
 
 * publisher side
@@ -41,13 +41,13 @@ ros2 run ownership ownership_sub -k exclusive
   - One publisher is shared ownership and it's ID is 100
 
 ```bash
-ros2 run ownership ownership_pub -k exclusive -i 100 -s 100
+ros2 run nsdk_ownership ownership_pub -k exclusive -i 100 -s 100
 ```
 
   - One publisher is shared ownership and it's ID is 200
 
 ```bash
-ros2 run ownership ownership_pub -k exclusive -i 200 -s 200
+ros2 run nsdk_ownership ownership_pub -k exclusive -i 200 -s 200
 ```
 
 Now you can see subscriber only can receive message from node id 200.
